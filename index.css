@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-family: "poppins" sans-serif;
+}
+body{
+    background-color: blue;
+    animation: colorchange 10s linear infinite;
+}
+@keyframes colorchange {
+    from{
+        background-color: blue;
+    }
+    to
+    {
+        background-color: rgb(85, 201, 156);
+    }
+}
+.container{
+    width: 100%;
+    height: 90vh;
+    margin:30px auto;
+    position: relative;
+   
+}
+.container #slider{
+    width: 100%;
+    height: 100%;
+    background-image:url("images/modle.jpg") ;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-position: center;
+    transition: 5s;
+    animation-name: changeimage;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+}
+#slider .indicator
+{ 
+    width: 100%;
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+
+}
+#slider .indicator div{
+    color: gray;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-size: 2vw;
+    padding: 2vw 2vw;
+}
+#slider .indicator div i:hover{
+    padding:1vw 1vw;
+    border-radius: 50%;
+    background-color: rgb(65, 130, 135);
+}
+@keyframes changeimage {
+    0%{
+        background-image: url("images/modle.jpg");
+    }
+    10%{
+        background-image: url("images/img5.jpg");
+    }
+    20%
+    {
+        background-image: url("images/img6.jpg");
+    }
+    30%
+    {
+        background-image: url("images/img7.jpg");
+    }
+    40%
+    {
+        background-image: url("images/img1.jpg");    }
+    50%
+    {
+        background-image: url("images/img2.jpg");
+    }
+    60%
+    { background-image: url("images/img3.jpg");
+    }
+    70%
+    {
+        background-image: url("images/img4.jpg");
+    }
+    80%
+    { background-image: url("images/img5.jpg");
+    }
+    90%
+    { background-image: url("images/img6.jpg");
+    }
+    100%
+    {
+        background-image: url("images/img1.jpg");
+    }
+}
